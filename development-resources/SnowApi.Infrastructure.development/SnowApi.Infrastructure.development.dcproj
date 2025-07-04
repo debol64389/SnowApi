@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <ProjectGuid>bc66e97a-986e-4238-a0e2-dbc7bd4ba5a9</ProjectGuid>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <DockerComposeProjectName>snowapi-infrastructure</DockerComposeProjectName>
+    <DockerComposeBaseFilePath>compose.infrastructure.development</DockerComposeBaseFilePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="compose.infrastructure.development.yml" />
+    <None Include="nuget.development.non-ssl.config" />
+    <None Include="../../.dockerignore" />
+  </ItemGroup>
+</Project>

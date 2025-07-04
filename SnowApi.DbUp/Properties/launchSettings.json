@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SnowApi.DbUp": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

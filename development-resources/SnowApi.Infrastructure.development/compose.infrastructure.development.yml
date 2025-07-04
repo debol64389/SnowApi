@@ -1,0 +1,56 @@
+################################################################################
+
+name: snowapi-infrastructure
+services:
+  # ############################################################################
+  # SQL Server instance
+  # ############################################################################
+  snowapi-mssql:
+    container_name: snowapi-sql-server
+    image: remote-docker-mcr.artifactory.danskenet.net/mssql/server:2022-latest
+    networks:
+      - mssql
+    ports:
+      # Connect to the server on localhost port 14330
+      # We choose the custom port 14330 if the default port 1433 is already in use
+      # by another SQL Server instance running on localhost
+      # and forward to the default port used in the container.
+    - 14339:1433
+    # Set environment variables to use as configuration for the SQL Server instance.
+    # Docs here: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-configure-environment-variables?view=sql-server-ver16
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "MyS3CUR3P@55wrd!"
+      MSSQL_PID: "Developer"
+    # Adding a health check to ensure SQL Server is ready
+    healthcheck:
+      test: ["CMD-SHELL", "pidof sqlservr || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ############################################################################
+  # Create Metadata database schema for SnowApi
+  # ############################################################################
+  snowapi-dbup:
+    container_name: snowapi-dbup
+    depends_on:
+      snowapi-mssql:
+        condition: service_healthy
+    image: ${DOCKER_REGISTRY-}snowapi.dbup   
+    build:
+      # Use solution root folder as build context 
+      context: ../../.
+      dockerfile: ./Docker/SnowApi.DbUp/Dockerfile
+    networks:
+      - mssql
+    volumes:
+      - ~/.aws/:/root/.aws:ro
+    environment:
+      - DOTNET_ENVIRONMENT=Development
+      - ConnectionStrings__SnowDatabase=Server=snowapi-sql-server;Database=SnowDatabase;Encrypt=False;User Id=sa;Password=MyS3CUR3P@55wrd!
+
+networks:
+  mssql:
+    name: snowapi-mssql-network
+    driver: bridge

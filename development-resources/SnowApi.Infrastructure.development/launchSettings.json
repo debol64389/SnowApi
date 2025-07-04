@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "archive-tables-service-mssql": "StartWithoutDebugging",
+        "archive-tables-service-dbup": "StartWithoutDebugging",
+        "archive-tables-service-sampledata": "StartWithoutDebugging"
+      }
+    }
+  }
+}

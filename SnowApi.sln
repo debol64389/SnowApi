@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnowApi", "SnowApi\SnowApi.csproj", "{004F4F70-4005-4252-9102-438ED06870B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowApi.DbUp", "SnowApi.DbUp\SnowApi.DbUp.csproj", "{431B08D8-7E2E-4A51-80D9-681EA7121A3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "development-resources", "development-resources", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{90EB09D6-2A17-48AF-818E-EACD308E7054}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{23B83E3D-21BE-475F-8260-053CADBF29C3}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "SnowApi.Infrastructure.development", "development-resources\SnowApi.Infrastructure.development\SnowApi.Infrastructure.development.dcproj", "{BC66E97A-986E-4238-A0E2-DBC7BD4BA5A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SnowApi.DbUp", "SnowApi.DbUp", "{7EF5E526-DC63-4BD4-BD63-C63DB23DFA9E}"
+	ProjectSection(SolutionItems) = preProject
+		Docker\SnowApi.DbUp\Dockerfile = Docker\SnowApi.DbUp\Dockerfile
+		Docker\SnowApi.DbUp\nuget.config = Docker\SnowApi.DbUp\nuget.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowApi.Core", "SnowApi.Core\SnowApi.Core.csproj", "{0B508063-BE27-44ED-89E9-BF3F1ECA2FAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowApi.Infrastructure", "SnowApi.Infrastructure\SnowApi.Infrastructure.csproj", "{27C23659-38B2-4A1B-8257-F9D4D26E1F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowApi.Services", "SnowApi.Services\SnowApi.Services.csproj", "{B8C86B35-66DC-4570-AF79-02521DB756CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BA92E320-D241-491F-95C4-35FB96F8F2A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowApi.UnitTests", "SnowApi.UnitTests\SnowApi.UnitTests.csproj", "{D5EE41BF-3397-4A0C-AD1D-AB2900829EBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{004F4F70-4005-4252-9102-438ED06870B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004F4F70-4005-4252-9102-438ED06870B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004F4F70-4005-4252-9102-438ED06870B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004F4F70-4005-4252-9102-438ED06870B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431B08D8-7E2E-4A51-80D9-681EA7121A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431B08D8-7E2E-4A51-80D9-681EA7121A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431B08D8-7E2E-4A51-80D9-681EA7121A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431B08D8-7E2E-4A51-80D9-681EA7121A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC66E97A-986E-4238-A0E2-DBC7BD4BA5A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC66E97A-986E-4238-A0E2-DBC7BD4BA5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC66E97A-986E-4238-A0E2-DBC7BD4BA5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC66E97A-986E-4238-A0E2-DBC7BD4BA5A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B508063-BE27-44ED-89E9-BF3F1ECA2FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B508063-BE27-44ED-89E9-BF3F1ECA2FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B508063-BE27-44ED-89E9-BF3F1ECA2FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B508063-BE27-44ED-89E9-BF3F1ECA2FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27C23659-38B2-4A1B-8257-F9D4D26E1F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C23659-38B2-4A1B-8257-F9D4D26E1F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C23659-38B2-4A1B-8257-F9D4D26E1F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C23659-38B2-4A1B-8257-F9D4D26E1F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C86B35-66DC-4570-AF79-02521DB756CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C86B35-66DC-4570-AF79-02521DB756CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C86B35-66DC-4570-AF79-02521DB756CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C86B35-66DC-4570-AF79-02521DB756CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5EE41BF-3397-4A0C-AD1D-AB2900829EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5EE41BF-3397-4A0C-AD1D-AB2900829EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5EE41BF-3397-4A0C-AD1D-AB2900829EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5EE41BF-3397-4A0C-AD1D-AB2900829EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC66E97A-986E-4238-A0E2-DBC7BD4BA5A9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7EF5E526-DC63-4BD4-BD63-C63DB23DFA9E} = {90EB09D6-2A17-48AF-818E-EACD308E7054}
+		{D5EE41BF-3397-4A0C-AD1D-AB2900829EBF} = {BA92E320-D241-491F-95C4-35FB96F8F2A6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73D3A976-3CD5-46C2-B8F5-1EF2F04C10BF}
+	EndGlobalSection
+EndGlobal
